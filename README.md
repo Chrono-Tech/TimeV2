@@ -50,4 +50,4 @@ To migrate v0.6 contracts run:
 yarn migrate:v0.6
 ```
 
-This will migrate the `LinkToken` contract to your locally deployed instance of Ganache blockchain.
+This will migrate the `TIME Token` contract to your locally deployed instance of Ganache blockchain.
