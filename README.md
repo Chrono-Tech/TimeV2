@@ -2,8 +2,6 @@
 
 The TIMEv2 token is an [EIP20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md) token with additional [ERC677](https://github.com/ethereum/EIPs/issues/677) functionality forked from LINK token by ChainLink.
 
-The total supply of the token is 1,000,000,000, and each token is divisible up to 18 decimal places.
-
 To prevent accidental burns, the token does not allow transfers to the contract itself and to 0x0.
 
 Security audit for [v0.4 version of the contracts](./contracts/v0.4/) is available [here](https://gist.github.com/Arachnid/4aa88041bd6e34835b8c0fd051245e79).
