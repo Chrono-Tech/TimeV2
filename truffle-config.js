@@ -2,8 +2,8 @@ const HDWalletProvider = require('@truffle/hdwallet-provider')
 
 const MNEMONIC =
   process.env.MNEMONIC ||
-  'clock radar mass judge dismiss just intact mind resemble fringe diary casino'
-const INFURA_API_KEY = process.env.INFURA_API_KEY
+  'ed650ca5aeabb757f1b19ad08ff99bbac1d1830b6343f9847ddb039b6ab5dab0'
+const INFURA_API_KEY = process.env.INFURA_API_KEY || 'b0418b049f9a4986ab4f8ba441aeca08'
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
 
 const walletProvider = provider => new HDWalletProvider(MNEMONIC, provider)
@@ -21,6 +21,20 @@ module.exports = {
     goerli: {
       provider: () => walletProvider(`https://goerli.infura.io/v3/${INFURA_API_KEY}`),
       network_id: 5,
+      gas: 7000000,
+      gasPrice: 10000000000, // 10 gwei
+      skipDryRun: true,
+    },
+    ropsten: {
+      provider: () => walletProvider(`https://ropsten.infura.io/v3/${INFURA_API_KEY}`),
+      network_id: 3,
+      gas: 7000000,
+      gasPrice: 10000000000, // 10 gwei
+      skipDryRun: true,
+    },      
+    rinkeby: {
+      provider: () => walletProvider(`https://rinkeby.infura.io/v3/${INFURA_API_KEY}`),
+      network_id: 4,
       gas: 7000000,
       gasPrice: 10000000000, // 10 gwei
       skipDryRun: true,

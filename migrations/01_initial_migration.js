@@ -1,4 +1,4 @@
-const version = process.env.VERSION || 'v0.4'
+const version = process.env.VERSION || 'v0.6'
 
 const { Migrations } = require(`../build/truffle/${version}/Migrations`)
 Migrations.setProvider(web3.currentProvider)

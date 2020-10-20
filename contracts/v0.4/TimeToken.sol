@@ -5,12 +5,12 @@ import './ERC677Token.sol';
 import './token/linkStandardToken.sol';
 
 
-contract LinkToken is linkStandardToken, ERC677Token {
+contract TimeToken is linkStandardToken, ERC677Token {
 
-  uint public constant totalSupply = 10**27;
-  string public constant name = 'ChainLink Token';
-  uint8 public constant decimals = 18;
-  string public constant symbol = 'LINK';
+  uint public constant totalSupply = 71011281080000;
+  string public constant name = 'ChronoTech Token';
+  uint8 public constant decimals = 8;
+  string public constant symbol = 'TIME';
 
   function LinkToken()
     public

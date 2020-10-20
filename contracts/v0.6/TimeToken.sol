@@ -3,10 +3,11 @@ pragma solidity ^0.6.0;
 import './token/LinkERC20.sol';
 import './ERC677Token.sol';
 
-contract LinkToken is LinkERC20, ERC677Token {
-  uint private constant TOTAL_SUPPLY = 10**27;
-  string private constant NAME = 'ChainLink Token';
-  string private constant SYMBOL = 'LINK';
+contract TimeToken is LinkERC20, ERC677Token {
+  uint private constant TOTAL_SUPPLY = 71011281080000;
+  uint8 private constant DECIMALS = 8;
+  string private constant NAME = 'ChronoTech Token';
+  string private constant SYMBOL = 'TIME';
 
   constructor() ERC20(NAME, SYMBOL)
     public
@@ -23,6 +24,7 @@ contract LinkToken is LinkERC20, ERC677Token {
     internal
     virtual
   {
+    _setupDecimals(DECIMALS);
     _mint(msg.sender, TOTAL_SUPPLY);
   }
 
